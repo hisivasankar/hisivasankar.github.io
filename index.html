@@ -1,10 +1,305 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Siva</title>
-</head>
-<body>
-	<h2>Hey, This website is under construction! Come back later...</h2>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Siva</title>
+    <style type="text/css">
+      body {
+        margin: 0;
+        font-family: "Rubik", sans-serif;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: rgb(210, 39, 82);
+      }
+      nav ul {
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      nav li {
+        list-style-type: none;
+        padding: 0.5rem 1rem;
+        text-align: center;
+      }
+      nav a {
+        text-decoration: none;
+        color: white;
+        font-size: 1.2rem;
+      }
+      main {
+        margin-top: 4rem;
+      }
+
+      #welcome-section {
+        width: 100%;
+        height: calc(100vh - 4rem);
+        background-color: rgb(210, 39, 82);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        line-height: 2rem;
+      }
+      #welcome-section .tagline {
+        text-align: center;
+      }
+
+      #scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 49%;
+        width: 2.4rem;
+        border: 1px solid white;
+        height: 4rem;
+        border-radius: 4rem;
+      }
+      #scroll-indicator::after {
+        content: "";
+        width: 1rem;
+        height: 1rem;
+        border-radius: 1rem;
+        background: white;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        animation: scrolling 4s;
+        animation-iteration-count: infinite;
+      }
+      @keyframes scrolling {
+        0% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(2rem);
+        }
+      }
+
+      .common {
+        width: 90%;
+        margin: auto;
+      }
+      .common header,
+      .common h3 {
+        color: rgb(210, 39, 82);
+      }
+      .common p {
+        text-align: justify;
+      }
+      section > header {
+        font-size: 1.6rem;
+        margin: 2rem 1rem 0 0;
+      }
+
+      #projects ul {
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      #projects li {
+        list-style-type: none;
+        padding: 1rem;
+        margin: 0.5rem;
+        background: rgb(210, 39, 82);
+        color: white;
+        width: 100%;
+        height: 10rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #projects li h3 {
+        color: white;
+      }
+      #projects li a {
+        text-decoration: none;
+      }
+      #projects li p.desc {
+        padding-bottom: 1rem;
+        text-align: center;
+      }
+      #contact ul {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+      }
+      #contact li {
+        list-style-type: none;
+      }
+
+      @media (min-width: 768px) {
+        .common {
+          width: 70%;
+          margin: auto;
+        }
+        #projects li {
+          width: 10rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <link
+      href="https://fonts.googleapis.com/css?family=Rubik"
+      rel="stylesheet"
+    />
+
+    <div id="page-wrapper">
+      <header>
+        <nav id="navbar">
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="welcome-section">
+          <div>
+            <h1>Hi, I'm { Sivasankar }</h1>
+            <p class="tagline">Live, Love, Laugh</p>
+            <div id="scroll-indicator"></div>
+          </div>
+        </section>
+        <section id="about" class="common">
+          <header>About me</header>
+          <p>
+            My name is Sivasankar Datchanamoorthy. I am 26 years old and I am
+            from Bengaluru, India. I work as Software engineer and specialize in
+            Fullstack development. I like being occupied with something. When I
+            am not working, you can find me Jamming with my Guitar, practising
+            new songs or learning something new.
+          </p>
+        </section>
+        <section id="skills" class="common">
+          <header>Skills</header>
+          <div class="category">
+            <h3>Programming/Scripting Languages</h3>
+            <ul>
+              <li>Javascript</li>
+              <li>Node.js</li>
+              <li>Java</li>
+              <li>Python</li>
+            </ul>
+          </div>
+          <div class="category">
+            <h3>Frontend Technologies</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>React</li>
+              <li>SAPUI5</li>
+            </ul>
+          </div>
+          <div class="category">
+            <h3>Backend Technologies</h3>
+            <ul>
+              <li>MySQL</li>
+              <li>SAP HANA</li>
+            </ul>
+          </div>
+        </section>
+        <section id="projects" class="common">
+          <header>Projects</header>
+          <ul>
+            <li>
+              <a href="https://codepen.io/hisivasankar/full/yZgdGM">
+                <h3 class="project-tile">Personal Website</h3>
+              </a>
+              <p class="desc">You are viewing it currently :)</p>
+            </li>
+            <li>
+              <a href="https://codepen.io/hisivasankar/full/omLEEP">
+                <h3 class="project-tile">Tick-Tock</h3>
+              </a>
+              <p class="desc">A Time Tracker</p>
+            </li>
+            <li>
+              <a href="https://codepen.io/hisivasankar/full/LqxXxd">
+                <h3 class="project-tile">Markdown Documentation</h3>
+              </a>
+            </li>
+
+            <li>
+              <a href="https://codepen.io/hisivasankar/full/omxpJE">
+                <h3 class="project-tile">Youtube Survey</h3>
+              </a>
+              <p class="desc">A survey form for Youtube Channel</p>
+            </li>
+            <li>
+              <a href="https://codepen.io/hisivasankar/full/WLWoMO">
+                <h3 class="project-tile">Tribute Page</h3>
+              </a>
+              <p class="desc">Freddie Mercury</p>
+            </li>
+          </ul>
+        </section>
+        <section id="contact" class="common">
+          <header>Contact</header>
+          <p>
+            Thanks for visiting my website. Wanna talk to me? Feel free to ping
+            anywhere below
+          </p>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/hisivasankar"
+                id="profile-link"
+                target="_blank"
+              >
+                <img src="https://img.icons8.com/color/48/000000/github.png" />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/hisivasankar/"
+                target="_blank"
+              >
+                <img
+                  src="https://img.icons8.com/color/48/000000/linkedin.png"
+                />
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com/hisivasankar" target="_blank">
+                <img src="https://img.icons8.com/color/48/000000/twitter.png" />
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/hisivasankar/" target="_blank">
+                <img
+                  src="https://img.icons8.com/color/48/000000/instagram-new.png"
+                />
+              </a>
+            </li>
+
+            <li>
+              <a
+                href="https://www.youtube.com/channel/UC4C55Qg_SkNb7whHaxBB2Sw"
+                target="_blank"
+              >
+                <img
+                  src="https://img.icons8.com/color/48/000000/youtube-play.png"
+                />
+              </a>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>
