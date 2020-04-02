@@ -50,10 +50,16 @@
         color: white;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         font-size: 1.5rem;
         line-height: 2rem;
+        background: center / cover no-repeat url("./sivasankar.jpg");
+        background-position-x: 59%;
+      }
+
+      #welcome-section div {
+        margin-top: 5rem;
       }
       #welcome-section .tagline {
         text-align: center;
@@ -153,6 +159,19 @@
           width: 70%;
           margin: auto;
         }
+
+        #welcome-section {
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: center;
+          background: center / cover no-repeat url("./sivasankar.jpg");
+          background-position-x: center;
+        }
+        #welcome-section div {
+          margin-left: 8%;
+          margin-top: -5%;
+        }
+
         #projects li {
           width: 10rem;
         }
@@ -174,21 +193,19 @@
       <main>
         <section id="welcome-section">
           <div>
-            <h1>
-              Hi, I'm { Sivasankar }
-            </h1>
-            <p class="tagline">Live, Love, Laugh</p>
+            <h1>Hi, I'm { Sivasankar }</h1>
+            <p class="tagline"></p>
             <div id="scroll-indicator"></div>
           </div>
         </section>
         <section id="about" class="common">
           <header>About me</header>
           <p>
-            I'm Sivasankar Datchanamoorthy. I am 26 years old and I am from
-            Bengaluru, India. I work as Software engineer and specialize in
-            Fullstack development. I like being occupied with something. When I
-            am not working, you can find me Jamming with my Guitar, practising
-            new songs or learning something new.
+            I'm Sivasankar Datchanamoorthy, a 26 years old Software engineer
+            from India, who specializes in Fullstack development. I always like
+            being occupied with something. When I am not working, I like to work
+            on new project ideas, fiddle with my guitar, learn to edit videos,
+            and watch YouTube videos.
           </p>
         </section>
         <section id="skills" class="common">
@@ -212,7 +229,7 @@
             </ul>
           </div>
           <div class="category">
-            <h3>Backend Technologies</h3>
+            <h3>Database systems</h3>
             <ul>
               <li>MySQL</li>
               <li>SAP HANA</li>
